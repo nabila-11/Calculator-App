@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root  {
+    /*** Theme 1 ***/
+    /*** Background ***/
+    --clr-vd-desaturated-blue-1: hsl(222, 26%, 31%); /* main-background */
+    --clr-vd-desaturated-blue-2: hsl(223, 31%, 20%); /*toggle-background, keypad-background */
+    --clr-vd-desaturated-blue-3: hsl(224, 36%, 15%);/* screen background */
+    /*** Keys ***/
+    --clr-d-desaturated-blue-1:  hsl(225, 21%, 49%); /* Key Background */
+    --clr-d-desaturated-blue-2: hsl(224, 28%, 35%); /*key shadow */
+
+    --clr-red:hsl(6, 63%, 50%); /* Key Background, toggle */
+    --clr-d-red:  hsl(6, 70%, 34%); /*key shadow */
+
+    --clr-light-grayish-orange: hsl(30, 25%, 89%); /* Key Background */
+    --clr-grayish-orange:  hsl(28, 16%, 65%); /*key shadow */
+
+    /*** Text ***/
+    --clr-vd-grayish-blue: hsl(221, 14%, 31%);
+    --clr-white:  hsl(0, 0%, 100%);
+
+}
+:root .theme__2 {
+     /*** Theme 2  ***/
+     /*** Background ***/
+     --clr-vd-desaturated-blue-1: hsl(0, 0%, 90%); /* main-background */
+     --clr-vd-desaturated-blue-2:  hsl(0, 5%, 81%); /* toggle-background, keypad background */
+     --clr-vd-desaturated-blue-3: hsl(0, 0%, 93%); /* screen background */
+
+      /*** Keys ***/
+      --clr-d-desaturated-blue-1: hsl(185, 42%, 37%); /*key background */
+      --clr-d-desaturated-blue-2: hsl(185, 58%, 25%); /*key shadow */
+
+      --clr-red: hsl(25, 98%, 40%); /* key background , toggle */
+      --clr-d-red: hsl(25, 99%, 27%); /* key shadow */
+
+      --clr-light-grayish-orange: hsl(45, 7%, 89%); /* key background*/
+      --clr-grayish-orange: hsl(35, 11%, 61%); /* key shadow*/
+    
+
+      /*** Text ***/
+      --clr-vd-grayish-blue: hsl(60, 10%, 19%); 
+      --clr-white: hsl(0, 0%, 100%); 
+}
+:root #theme__3 {
+     /*** Theme 3 ***/
+      /*** Background ***/
+      --clr-vd-desaturated-blue-1: hsl(268, 75%, 9%); /* main-background*/
+      --clr-vd-desaturated-blue-2:  hsl(268, 71%, 12%); /*screen background */
+
+      /*** Keys ***/
+      --clr-d-violet: hsl(281, 89%, 26%); /* */
+      --clr-vivid-magneta: hsl(285, 91%, 52%); /* */
+      --clr-pure-cyan: hsl(176, 100%, 44%); /* */
+      --clr-soft-cyan: hsl(177, 92%, 70%); /* */
+      --clr-vd-violet: hsl(268, 47%, 21%); /* */
+      --clr-dark-magneta: ; /* */
+
+
+      /*** Text ***/
+      --clr-light-yellow:hsl(52, 100%, 62%) ; /* */
+      --clr-vd-blue:  hsl(198, 20%, 13%); /* */
+      --clr-white: hsl(0, 0%, 100%); /* */
+}
+body {
+    font-family: 'League Spartan', sans-serif;
+   background-color: var(--clr-vd-desaturated-blue-1);
+
+}
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.numbers {
+    font-size: 32px;
+}
+.header.flex {
+    justify-content: space-between;
+}
+
+
+/* ======== Theme ========= */
+.calculator, .tri-state-toggle {
+    color: var(--clr-white);
+}
+input {
+   height: 20px;
+   width: 20px;
+   appearance: none;
+   background-color: var(--clr-red);
+   border-radius: 50%;
+   opacity: 0;
+}
+input:hover {
+    cursor: pointer;
+    
+}
+.tri-state-toggle {
+    display: flex;
+    justify-content: center;
+    border: 3px solid var(--clr-vd-desaturated-blue-2);
+    border-radius: 50px;
+    background-color: var(--clr-vd-desaturated-blue-2);
+    width: 3.2rem;
+}
+.button {
+    height: 14px;
+    width: 14px;
+}
+#theme__1 {
+    opacity: 1;
+   
+}
+/* #theme__2 {
+    opacity: 1;
+}
+#theme__3 {
+    opacity: 1;
+} */
+.header {
+    margin-bottom: 2rem;
+}
+/* ================
+    User Input
+   ================ */
+   .user__input {
+    height: 5.2rem;
+    width: 25rem;
+    background-color: var(--clr-vd-desaturated-blue-3);
+    margin-bottom: 1rem;
+    border-radius: 0.389rem;
+    color: var(--clr-white);
+    font-size: 2rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 1.4rem;
+    word-wrap: break-word;
+    word-break: break all;
+   }
+   .previous__operand {
+    margin-bottom: 8px;
+    font-size: 1.5rem;
+   }
+   .current__operand {
+font-size: 2rem;
+   }
+
+/* ==================
+  GRID CONTAINER
+=====================*/
+.grid__container {
+    background-color: var(--clr-vd-desaturated-blue-2);
+    
+    width: 25rem;
+    padding: 1.2rem 1.2rem;
+    border-radius: 0.389rem;
+    height: 22rem;
+}
+.grid {
+    display: grid;
+    grid-template-columns:repeat(4, 4.8rem);
+    gap: 1rem;
+    justify-content: center;
+}
+.reset, .equal {
+    grid-column: span 2;
+}
+button {
+    border-radius: 0.389rem;
+    border-color: transparent;
+    outline: none;
+    color: var(--clr-vd-grayish-blue);
+    font-weight: 700;
+    box-shadow: 0 4px 0 var(--clr-grayish-orange);
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+button:active {
+    box-shadow: none;
+}
+button:focus {
+    color: var(--clr-vd-desaturated-blue-2);
+}
+.del, .reset {
+    background-color: var(--clr-d-desaturated-blue-1);
+    color: var(--clr-white);
+    font-size: 1.5rem;
+    box-shadow: 0 4px 0 var(--clr-d-desaturated-blue-2);
+}
+.equal {
+    background-color: var(--clr-red);
+    color: var(--clr-white);
+    box-shadow: 0 4px 0 var(--clr-d-red);
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    <title>Calculator app</title>
+  </head>
+  <body>
+    <!-- main -->
+    <main>
+      <div class="container">
+        <!-- Header -->
+        <div class="header flex">
+          <h1 class="calculator">calc</h1>
+          <!-- <div class="tri-state-toggle flex">
+            <input type="radio" class="button" id="theme__1" />
+            <input type="radio" class="theme__2" class="button"  />
+            <input type="radio" class="theme__3" class="button"  />
+          </div> -->
+        </div>
+        <!-- Header End -->
+        <!-- User Input -->
+        <div class="user__input">
+          <div data-previous-operand class="previous__operand"></div>
+          <div data-current-operand class="current__operand"></div>
+        </div>
+        <!-- User Input End -->
+        <div class="grid__container grid">
+          <button data-num class="numbers">7</button>
+          <button data-num class="numbers">8</button>
+          <button data-num class="numbers">9</button>
+          <button data-delete class="numbers del">DEL</button>
+          <button data-num class="numbers">4</button>
+          <button data-num class="numbers">5</button>
+          <button data-num class="numbers">6</button>
+          <button data-operator class="numbers">+</button>
+          <button data-num class="numbers">1</button>
+          <button data-num class="numbers">2</button>
+          <button data-num class="numbers">3</button>
+          <button data-operator class="numbers">-</button>
+          <button data-num class="numbers">.</button>
+          <button data-num class="numbers">0</button>
+          <button data-operator class="numbers">/</button>
+          <button data-operator class="numbers">x</button>
+          <button data-reset class="reset numbers">RESET</button>
+          <button data-equal class="equal numbers">=</button>
+        </div>
+      </div>
+    </main>
+    <!-- main end -->
+
+    <!-- JS -->
+    <script src="./Script.js"></script>
+  </body>
+</html>
